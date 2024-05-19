@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RecentlyCollectionViewCell" id="gTV-IL-0wX" customClass="RecentlyCollectionViewCell" customModule="AppSpotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="420" height="140"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="420" height="140"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ouq-mS-F2t">
+                        <rect key="frame" x="0.0" y="0.0" width="420" height="140"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="download" translatesAutoresizingMaskIntoConstraints="NO" id="Hxg-IH-OBB">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="140"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y5g-Fu-93c">
+                                <rect key="frame" x="150" y="61" width="260" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.21356288316972094" green="0.21356288316972094" blue="0.21356288316972094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Hxg-IH-OBB" firstAttribute="width" secondItem="Ouq-mS-F2t" secondAttribute="width" multiplier="0.333333" id="1eZ-hT-wVy"/>
+                            <constraint firstAttribute="bottom" secondItem="Hxg-IH-OBB" secondAttribute="bottom" id="22x-ts-OKg"/>
+                            <constraint firstItem="y5g-Fu-93c" firstAttribute="leading" secondItem="Hxg-IH-OBB" secondAttribute="trailing" constant="10" id="89Q-La-Ef7"/>
+                            <constraint firstItem="y5g-Fu-93c" firstAttribute="centerY" secondItem="Ouq-mS-F2t" secondAttribute="centerY" id="RWb-3c-9D9"/>
+                            <constraint firstItem="Hxg-IH-OBB" firstAttribute="leading" secondItem="Ouq-mS-F2t" secondAttribute="leading" id="b62-bd-6gO"/>
+                            <constraint firstAttribute="trailing" secondItem="y5g-Fu-93c" secondAttribute="trailing" constant="10" id="i2v-fH-a28"/>
+                            <constraint firstItem="Hxg-IH-OBB" firstAttribute="top" secondItem="Ouq-mS-F2t" secondAttribute="top" id="nkg-5g-Eqt"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Ouq-mS-F2t" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="2Do-eq-gkE"/>
+                <constraint firstAttribute="bottom" secondItem="Ouq-mS-F2t" secondAttribute="bottom" id="F9w-hX-fmP"/>
+                <constraint firstItem="Ouq-mS-F2t" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="PIb-2R-sCh"/>
+                <constraint firstAttribute="trailing" secondItem="Ouq-mS-F2t" secondAttribute="trailing" id="XCA-0T-nKJ"/>
+            </constraints>
+            <size key="customSize" width="420" height="140"/>
+            <connections>
+                <outlet property="nameLabel" destination="y5g-Fu-93c" id="4Aa-Iq-ztP"/>
+                <outlet property="testImage" destination="Hxg-IH-OBB" id="Ocq-9Y-wc7"/>
+            </connections>
+            <point key="canvasLocation" x="132.82442748091603" y="-457.74647887323948"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="download" width="50" height="50"/>
+    </resources>
+</document>
