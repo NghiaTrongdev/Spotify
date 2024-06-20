@@ -8,6 +8,7 @@
 import UIKit
 
 class PodcastCollectionViewCell: UICollectionViewCell {
+    static let identifier = "PodcastCollectionViewCell"
 
     override func awakeFromNib() {
         super.awakeFromNib()

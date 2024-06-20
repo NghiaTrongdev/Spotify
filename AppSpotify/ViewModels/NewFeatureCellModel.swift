@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct NewFeatureCellModel{
+    let name : String
+    let id : String
+    let urlString : URL?
+    let createName : String
+}

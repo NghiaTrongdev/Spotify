@@ -1,21 +1,115 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BottomTypeGridCollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BottomTypeGridCollectionViewCell" customModule="AppSpotify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="620" height="240"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="620" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="MVL-hI-Nrf">
+                        <rect key="frame" x="0.0" y="0.0" width="620" height="240"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="066-B5-WKB">
+                                <rect key="frame" x="0.0" y="0.0" width="620" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm nghệ sĩ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-3d-U6K">
+                                        <rect key="frame" x="125" y="5" width="490" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FqQ-km-0lG">
+                                        <rect key="frame" x="10" y="5" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="FqQ-km-0lG" secondAttribute="height" multiplier="1:1" id="jyb-Pk-WCt"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                            <backgroundConfiguration key="background" cornerRadius="59">
+                                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="heavy"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="FqQ-km-0lG" firstAttribute="top" secondItem="066-B5-WKB" secondAttribute="top" constant="5" id="ATk-Tb-Xay"/>
+                                    <constraint firstItem="RKJ-3d-U6K" firstAttribute="top" secondItem="066-B5-WKB" secondAttribute="top" constant="5" id="Jef-uD-NRI"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKJ-3d-U6K" secondAttribute="trailing" constant="5" id="Lzd-sn-Ldz"/>
+                                    <constraint firstItem="FqQ-km-0lG" firstAttribute="leading" secondItem="066-B5-WKB" secondAttribute="leading" constant="10" id="S06-Bs-MvR"/>
+                                    <constraint firstAttribute="bottom" secondItem="RKJ-3d-U6K" secondAttribute="bottom" constant="5" id="WEq-fk-eDo"/>
+                                    <constraint firstItem="RKJ-3d-U6K" firstAttribute="leading" secondItem="FqQ-km-0lG" secondAttribute="trailing" constant="5" id="aTJ-9w-VXe"/>
+                                    <constraint firstAttribute="bottom" secondItem="FqQ-km-0lG" secondAttribute="bottom" constant="5" id="hxo-8n-FxQ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m8p-hU-0so">
+                                <rect key="frame" x="0.0" y="120" width="620" height="120"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thêm podcast và chương trình" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L7A-8k-i0e">
+                                        <rect key="frame" x="125" y="5" width="490" height="110"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vU-Xi-pED">
+                                        <rect key="frame" x="10" y="5" width="110" height="110"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="3vU-Xi-pED" secondAttribute="height" multiplier="1:1" id="crJ-ox-QAg"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                            <backgroundConfiguration key="background" cornerRadius="15">
+                                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </backgroundConfiguration>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="heavy"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="L7A-8k-i0e" secondAttribute="bottom" constant="5" id="9nA-5i-AEJ"/>
+                                    <constraint firstItem="L7A-8k-i0e" firstAttribute="top" secondItem="m8p-hU-0so" secondAttribute="top" constant="5" id="CqX-Cd-OW4"/>
+                                    <constraint firstItem="L7A-8k-i0e" firstAttribute="leading" secondItem="3vU-Xi-pED" secondAttribute="trailing" constant="5" id="GOZ-RU-LdC"/>
+                                    <constraint firstItem="3vU-Xi-pED" firstAttribute="top" secondItem="m8p-hU-0so" secondAttribute="top" constant="5" id="OAm-XA-7bS"/>
+                                    <constraint firstAttribute="bottom" secondItem="3vU-Xi-pED" secondAttribute="bottom" constant="5" id="WJu-kC-urI"/>
+                                    <constraint firstAttribute="trailing" secondItem="L7A-8k-i0e" secondAttribute="trailing" constant="5" id="YSX-H4-Ul5"/>
+                                    <constraint firstItem="3vU-Xi-pED" firstAttribute="leading" secondItem="m8p-hU-0so" secondAttribute="leading" constant="10" id="eBg-8U-dHq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="MVL-hI-Nrf" secondAttribute="bottom" id="B3F-KM-4Vd"/>
+                <constraint firstItem="MVL-hI-Nrf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Kt6-EZ-s3b"/>
+                <constraint firstAttribute="trailing" secondItem="MVL-hI-Nrf" secondAttribute="trailing" id="nUc-Nv-Blb"/>
+                <constraint firstItem="MVL-hI-Nrf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="x1f-Lz-5tb"/>
+            </constraints>
+            <size key="customSize" width="497" height="333"/>
+            <connections>
+                <outlet property="artistButton" destination="FqQ-km-0lG" id="Y6u-Se-I8N"/>
+                <outlet property="otherButton" destination="3vU-Xi-pED" id="zM3-Yc-uP6"/>
+            </connections>
+            <point key="canvasLocation" x="429.7709923664122" y="119.36619718309859"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>

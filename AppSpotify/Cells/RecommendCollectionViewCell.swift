@@ -19,7 +19,11 @@ class RecommendCollectionViewCell: UICollectionViewCell {
         image.contentMode = .scaleAspectFit
         namelabel.textColor = .gray
     }
-    func configuareModel(model : NewReleaseCellViewModel){
+    func configuareModel(model : RecommendationCellModel){
+        image.sd_setImage(with: model.image)
+        namelabel.text = model.name
+    }
+    func configuareforNewReleaser(model : NewReleaseCellViewModel){
         image.sd_setImage(with: model.artworkURL)
         namelabel.text = model.name
     }

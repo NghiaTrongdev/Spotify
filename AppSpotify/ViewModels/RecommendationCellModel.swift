@@ -6,3 +6,10 @@
 //
 
 import Foundation
+struct RecommendationCellModel {
+    let id : String
+    let image : URL?
+    let name : String
+    let artists : String
+    let numberoftrack : Int
+}

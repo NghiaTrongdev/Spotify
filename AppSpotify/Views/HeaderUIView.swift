@@ -14,6 +14,7 @@ protocol HeaderUIViewDelgate : AnyObject{
 }
 class HeaderUIView: UIView {
     weak var delegate : HeaderUIViewDelgate?
+    
     struct ConstButton {
         static let buttonheight = 40.0
         static let spacing = 10.0
@@ -142,11 +143,12 @@ class HeaderUIView: UIView {
             podcastButton.heightAnchor.constraint(equalToConstant: CGFloat(ConstButton.buttonheight))
         ])
     }
-    @objc private func profileOnclick(){
-        delegate?.profileButtonDidTapped()
+    @objc func profileOnclick(){
+        self.delegate?.profileButtonDidTapped()
     }
     
     @objc private func allbuttonOnclick(){
+        self.delegate?.allbuttonDidTapped()
         UIView.animate(withDuration: 0.1, animations: {
             // Thiết lập scale và opacity cho nút khi ấn
             self.allButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
@@ -170,11 +172,12 @@ class HeaderUIView: UIView {
         }
         
         // Gọi delegate khi nút được nhấn
-        delegate?.allbuttonDidTapped()
+       
     }
 
 
-    @objc private func songbuttonOnclick(){
+    @objc func songbuttonOnclick(){
+        self.delegate?.songbuttonDidTapped()
         UIView.animate(withDuration: 0.1, animations: {
             // Thiết lập scale và opacity cho nút khi ấn
             self.songsButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
@@ -196,9 +199,10 @@ class HeaderUIView: UIView {
             }
         }
         
-        delegate?.songbuttonDidTapped()
+        
     }
     @objc private func podcastbuttonOnclick(){
+        self.delegate?.podcastsButtonDidTapped()
         UIView.animate(withDuration: 0.1, animations: {
             // Thiết lập scale và opacity cho nút khi ấn
             self.podcastButton.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
@@ -220,9 +224,7 @@ class HeaderUIView: UIView {
             }
         }
         
-        
-        
-        delegate?.podcastsButtonDidTapped()
+     
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

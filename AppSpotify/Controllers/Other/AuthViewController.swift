@@ -18,7 +18,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         return web
     }()
 
-     var comletionHandler: ((Bool) -> Void)?
+     var completionHandler: ((Bool) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,27 +38,20 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+ 
     func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
         guard let url = webview.url  else {
             return
         }
+        
         guard let code = URLComponents(string: url.absoluteString)?.queryItems?.first(where: {$0.name == "code"})?.value else {
             return
         }
-      
+        
         AuthManager.shared.exchangeCodeforToken(code: code){[weak self] success in
             DispatchQueue.main.async {
-                self?.navigationController?.popViewController(animated: true)
-                self?.comletionHandler?(success)
+                self?.navigationController?.popToRootViewController(animated: true)
+                self?.completionHandler?(success)
             }
             
         }

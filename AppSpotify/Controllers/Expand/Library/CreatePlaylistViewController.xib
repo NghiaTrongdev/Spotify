@@ -1,22 +1,96 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlaylistViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreatePlaylistViewController" customModule="AppSpotify" customModuleProvider="target">
             <connections>
+                <outlet property="ceateButton" destination="F6i-uV-UKg" id="CVM-Sd-mJP"/>
+                <outlet property="txtName" destination="NAk-fY-Ovs" id="dmT-oT-MFx"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJd-21-eLR">
+                    <rect key="frame" x="343" y="64" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="PJd-21-eLR" secondAttribute="height" multiplier="1:1" id="2iZ-ph-W6T"/>
+                        <constraint firstAttribute="height" constant="40" id="xCd-nO-oka"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="closeButtonOnclick:" destination="-1" eventType="touchUpInside" id="yca-qt-tXw"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Đặt tên cho danh sách phát của bạn" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YnI-zI-s0Q">
+                    <rect key="frame" x="35.666666666666657" y="199" width="321.66666666666674" height="23"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Danh sách phát thứ " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAk-fY-Ovs">
+                    <rect key="frame" x="40" y="322" width="313" height="24.666666666666686"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rOe-1R-mcC">
+                    <rect key="frame" x="30" y="361.66666666666669" width="333" height="1"/>
+                    <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="nas-o7-fk3"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6i-uV-UKg">
+                    <rect key="frame" x="146.66666666666666" y="402.66666666666669" width="100" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="4dI-kc-cpP"/>
+                        <constraint firstAttribute="width" constant="100" id="PKG-pG-KtJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Tạo">
+                        <backgroundConfiguration key="background" cornerRadius="25"/>
+                        <fontDescription key="titleFontDescription" style="UICTFontTextStyleHeadline"/>
+                        <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                    </buttonConfiguration>
+                </button>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="NAk-fY-Ovs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="06Z-k3-lvB"/>
+                <constraint firstItem="rOe-1R-mcC" firstAttribute="top" secondItem="NAk-fY-Ovs" secondAttribute="bottom" constant="15" id="5AK-CK-bXP"/>
+                <constraint firstItem="YnI-zI-s0Q" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6T0-C0-he3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NAk-fY-Ovs" secondAttribute="trailing" constant="40" id="95s-Cv-cV4"/>
+                <constraint firstItem="F6i-uV-UKg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Cg3-sE-3rf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rOe-1R-mcC" secondAttribute="trailing" constant="30" id="ITy-66-szS"/>
+                <constraint firstItem="F6i-uV-UKg" firstAttribute="top" secondItem="rOe-1R-mcC" secondAttribute="bottom" constant="40" id="JJa-1n-sS5"/>
+                <constraint firstItem="rOe-1R-mcC" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="JK4-0S-shL"/>
+                <constraint firstItem="YnI-zI-s0Q" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="140" id="NcZ-5G-t31"/>
+                <constraint firstItem="NAk-fY-Ovs" firstAttribute="top" secondItem="YnI-zI-s0Q" secondAttribute="bottom" constant="100" id="QYU-aj-KxU"/>
+                <constraint firstItem="NAk-fY-Ovs" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="WLJ-W3-WcL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="PJd-21-eLR" secondAttribute="trailing" constant="10" id="ZnU-ri-kVW"/>
+                <constraint firstItem="PJd-21-eLR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="5" id="wxQ-5Y-HDK"/>
+            </constraints>
+            <point key="canvasLocation" x="34" y="20"/>
         </view>
     </objects>
+    <resources>
+        <image name="xmark" catalog="system" width="128" height="113"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>

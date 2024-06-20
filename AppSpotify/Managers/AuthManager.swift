@@ -43,9 +43,9 @@ final class AuthManager {
         
         return currentDate.addingTimeInterval(fiveminutes) >= expirationDate
     }
+    
+    
     public func exchangeCodeforToken(code: String,completion : @escaping((Bool)-> Void)){
-        // handle
-        
         guard let url = URL(string: Constants.tokenURL) else {
             return
         }
@@ -53,13 +53,14 @@ final class AuthManager {
         var components = URLComponents()
         components.queryItems = [
             URLQueryItem(name: "grant_type", value: "authorization_code"),
-            URLQueryItem(name: "redirect_uri", value: "\(Constants.redirectionURL)"),
             URLQueryItem(name: "code", value: code),
+            URLQueryItem(name: "redirect_uri", value: "\(Constants.redirectionURL)"),
+          
         
         ]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "content-type")
+        request.setValue("application/x-www-form-urlencoded ", forHTTPHeaderField: "Content-type")
         request.httpBody = components.query?.data(using: .utf8)
         
         let basicToken = Constants.clientId + ":" + Constants.clientSecret
@@ -80,7 +81,7 @@ final class AuthManager {
             do {
                 let result = try JSONDecoder().decode(AuthResponse.self, from: data)
                 self?.caheToken(result : result)
-                
+                completion(true)
             }catch {
                 print(error.localizedDescription)
                 completion(false)
@@ -91,6 +92,7 @@ final class AuthManager {
     }
     
     private var onRefreshBlocks = [((String)-> Void)]()
+    
     public func withValidToken(completion : @escaping(String)->Void){
         
         guard !refreshingToken  else {

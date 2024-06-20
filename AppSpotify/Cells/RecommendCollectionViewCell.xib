@@ -19,11 +19,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ask-CE-uGv">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="400"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-q1-Gbc">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="AcI-q1-Gbc">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rat la nhieu chu nhe hihihihihihihihiiiiiii xin chao nhe hâhhah" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WD-ug-ki0">
-                                <rect key="frame" x="0.0" y="300" width="300" height="100"/>
+                                <rect key="frame" x="5" y="300" width="290" height="100"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -31,13 +31,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6WD-ug-ki0" firstAttribute="leading" secondItem="Ask-CE-uGv" secondAttribute="leading" id="Fym-xR-0gT"/>
+                            <constraint firstItem="6WD-ug-ki0" firstAttribute="leading" secondItem="Ask-CE-uGv" secondAttribute="leading" constant="5" id="Fym-xR-0gT"/>
                             <constraint firstAttribute="bottom" secondItem="6WD-ug-ki0" secondAttribute="bottom" id="NQi-ii-maA"/>
                             <constraint firstItem="AcI-q1-Gbc" firstAttribute="height" secondItem="Ask-CE-uGv" secondAttribute="height" multiplier="0.75" id="OCe-5O-aSq"/>
                             <constraint firstItem="6WD-ug-ki0" firstAttribute="top" secondItem="AcI-q1-Gbc" secondAttribute="bottom" id="Tex-DJ-Syx"/>
                             <constraint firstItem="AcI-q1-Gbc" firstAttribute="leading" secondItem="Ask-CE-uGv" secondAttribute="leading" id="fmB-Ox-4gv"/>
                             <constraint firstItem="AcI-q1-Gbc" firstAttribute="top" secondItem="Ask-CE-uGv" secondAttribute="top" id="hDz-hh-1rI"/>
-                            <constraint firstAttribute="trailing" secondItem="6WD-ug-ki0" secondAttribute="trailing" id="hEi-u2-ev8"/>
+                            <constraint firstAttribute="trailing" secondItem="6WD-ug-ki0" secondAttribute="trailing" constant="5" id="hEi-u2-ev8"/>
                             <constraint firstItem="AcI-q1-Gbc" firstAttribute="width" secondItem="Ask-CE-uGv" secondAttribute="width" id="lBD-WL-2Em"/>
                             <constraint firstAttribute="trailing" secondItem="AcI-q1-Gbc" secondAttribute="trailing" id="mUn-Vb-jJ8"/>
                         </constraints>
@@ -59,6 +59,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="logo" width="2048" height="2048"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

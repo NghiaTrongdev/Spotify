@@ -1,9 +1,12 @@
 import UIKit
-
+protocol PreviewLibraryViewControllerDelegate : AnyObject{
+    func handleOpenCreatePlaylist()
+}
 class PreviewLibraryViewController: UIViewController {
     @IBOutlet weak var bottomView: UIView!
     @IBOutlet weak var viewList: UIView!
     @IBOutlet weak var viewGeneral: UIView!
+    weak var delegate : PreviewLibraryViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +29,9 @@ class PreviewLibraryViewController: UIViewController {
     private func listener(){
         let panGetuare = UIPanGestureRecognizer(target: self, action: #selector(closeView(_:)))
         bottomView.addGestureRecognizer(panGetuare)
+        
+        let clickPanGetuare = UITapGestureRecognizer(target: self, action: #selector(clickCreate))
+        viewList.addGestureRecognizer(clickPanGetuare)
     }
     @objc private func closeView(_ gesture: UIPanGestureRecognizer) {
         let translation = gesture.translation(in: bottomView)
@@ -39,7 +45,11 @@ class PreviewLibraryViewController: UIViewController {
         } else if gesture.state == .ended {
             if translation.y > bottomView.frame.height * 0.3 {
                 // Nếu kéo xuống đủ xa hoặc kéo nhanh thì đóng view
-                UIView.animate(withDuration: 0.5, delay: 0,options: .curveEaseOut, animations: {
+                
+                UIView.animate(withDuration: 0.3, delay: 0,options: .curveEaseOut, animations: {
+                    self.bottomView.frame.origin.y = self.bottomView.height
+                    self.view.backgroundColor = .clear
+                    self.view.alpha = 1
                     self.view.frame.origin.y = self.view.frame.height
                 }) { _ in
                     self.dismiss(animated: true, completion: nil)
@@ -51,6 +61,9 @@ class PreviewLibraryViewController: UIViewController {
                 }
             }
         }
+    }
+    @objc func clickCreate(){
+        self.delegate?.handleOpenCreatePlaylist()
     }
   
 }

@@ -28,8 +28,7 @@ class WellcomeViewController: UIViewController {
     }
     @objc private func signInButtonDidTapped(){
         let vc = AuthViewController()
-        vc.comletionHandler = {[weak self] success in
-            
+        vc.completionHandler = {[weak self] success in
             DispatchQueue.main.async {
                 self?.handleSignIn(success: success)
             }
@@ -38,12 +37,15 @@ class WellcomeViewController: UIViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     private func handleSignIn(success : Bool){
+        
         guard success else {
             let alert = UIAlertController(title: "Oops", message:"Somethings went wrong when Sign in", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
             present(alert, animated: true)
             return
         }
+        
+        
         let vc = TabBarViewController()
         vc.modalPresentationStyle = .fullScreen
         present(vc, animated: true)

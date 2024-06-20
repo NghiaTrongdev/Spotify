@@ -6,3 +6,9 @@
 //
 
 import Foundation
+struct User : Codable {
+    let id : String
+    let external_urls : [String : String]
+    let display_name : String
+    let href : String
+}

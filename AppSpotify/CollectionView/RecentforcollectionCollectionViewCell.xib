@@ -50,7 +50,7 @@
             <connections>
                 <outlet property="maincollectionview" destination="V2q-80-Eed" id="hOZ-S9-LeW"/>
             </connections>
-            <point key="canvasLocation" x="106.87022900763358" y="-16.197183098591552"/>
+            <point key="canvasLocation" x="176" y="-32"/>
         </collectionViewCell>
     </objects>
     <resources>

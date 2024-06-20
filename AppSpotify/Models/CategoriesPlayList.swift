@@ -6,6 +6,14 @@
 //
 
 import Foundation
-struct Categories{
-    
+struct CategoriesRespone : Codable {
+    let categories : CategoriesPlayList
+}
+struct CategoriesPlayList : Codable{
+    let items : [Category]
+}
+struct Category : Codable {
+    let icons : [APIImage]
+    let id : String
+    let name : String
 }
