@@ -1,21 +1,20 @@
 //
-//  PlayListViewController.swift
+//  EditUserViewController.swift
 //  AppSpotify
 //
-//  Created by Trọng Nghĩa Nguyễn on 8/5/24.
+//  Created by Trọng Nghĩa Nguyễn on 6/6/24.
 //
 
 import UIKit
 
-class PlayListViewController: UIViewController {
-    
+class EditUserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
 
     /*
     // MARK: - Navigation

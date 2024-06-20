@@ -1,13 +1,13 @@
 //
-//  PremiumViewController.swift
+//  UserViewController.swift
 //  AppSpotify
 //
-//  Created by Trọng Nghĩa Nguyễn on 7/6/24.
+//  Created by Trọng Nghĩa Nguyễn on 6/6/24.
 //
 
 import UIKit
 
-class PremiumViewController: UIViewController {
+class UserViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

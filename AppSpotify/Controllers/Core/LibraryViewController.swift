@@ -2,7 +2,7 @@
 //  LibraryViewController.swift
 //  AppSpotify
 //
-//  Created by Trọng Nghĩa Nguyễn on 8/5/24.
+//  Created by Trọng Nghĩa Nguyễn on 7/6/24.
 //
 
 import UIKit
@@ -11,17 +11,19 @@ class LibraryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        view.backgroundColor = .systemBackground
-        navigationController?.setNavigationBarHidden(true, animated: false)
-        let headerview = HeaderForLibrary(frame: CGRect(x: 0, y:96, width: view.width, height: 50))
-        headerview.backgroundColor = .systemBackground
-        view.addSubview(headerview)
-        
-    }
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
+
+        // Do any additional setup after loading the view.
     }
 
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

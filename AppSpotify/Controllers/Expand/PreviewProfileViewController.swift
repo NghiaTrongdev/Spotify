@@ -1,13 +1,13 @@
 //
-//  PremiumViewController.swift
+//  PreviewProfileViewController.swift
 //  AppSpotify
 //
-//  Created by Trọng Nghĩa Nguyễn on 7/6/24.
+//  Created by Trọng Nghĩa Nguyễn on 4/6/24.
 //
 
 import UIKit
 
-class PremiumViewController: UIViewController {
+class PreviewProfileViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
